@@ -1,11 +1,5 @@
 #include "Fixed.hpp"
 
-Fixed& Fixed::operator=(const Fixed& ref)
-{
-    std::cout << "Copy assignment operator called\n";
-    this->value = ref.value;
-    return(*this);
-}
 
 Fixed::Fixed( void )
 {
@@ -47,8 +41,12 @@ std::ostream& operator<<(std::ostream& os, const Fixed& ref)
     return(os);
 }
 
-
-
+Fixed& Fixed::operator=(const Fixed& ref)
+{
+    std::cout << "Copy assignment operator called\n";
+    this->value = ref.value;
+    return(*this);
+}
 
 Fixed::~Fixed()
 {

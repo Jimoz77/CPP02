@@ -16,5 +16,9 @@ int main( void )
 
     std::cout << Fixed::max( a, b ) << std::endl;
     
+    if(a < b)
+        std::cout << "b est plus grand\n";
+    if(a > b)
+        std::cout << "a est plus grand\n";
     return 0;
 }
