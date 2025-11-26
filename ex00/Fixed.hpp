@@ -13,7 +13,7 @@ public:
     Fixed(/* args */);
     Fixed(const Fixed& other);
     Fixed& operator=(const Fixed& ref);
-    int getRawBits( void ) const; // {return value;} // pas sûr 
+    int getRawBits( void ) const; 
     void setRawBits( int const raw );
     ~Fixed();
 };

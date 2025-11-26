@@ -70,7 +70,7 @@ Fixed Fixed::operator*(const Fixed& ref)
 {
     Fixed result;
 
-    result.value = (this->value * ref.value) >> fractBits; //pk
+    result.value = (this->value * ref.value) >> fractBits;
     return (result);
 }
 
@@ -78,7 +78,7 @@ Fixed Fixed::operator/(const Fixed& ref)
 {
     Fixed result;
 
-    result.value = (this->value << fractBits) / ref.value; //pk
+    result.value = (this->value << fractBits) / ref.value;
     return (result);
 
 }
@@ -153,13 +153,13 @@ Fixed::Fixed( void )
 Fixed::Fixed(const int nbr)
 {
     std::cout << "Int constructor called\n";
-    this->value = nbr << fractBits; //pk
+    this->value = nbr << fractBits;
 }
 
 Fixed::Fixed(const float nbr)
 {
     std::cout << "Float constructor called\n";
-    this->value = roundf(nbr * (1 << fractBits)); //pk
+    this->value = roundf(nbr * (1 << fractBits));
 }
 
 Fixed::Fixed(const Fixed& other)
@@ -170,12 +170,12 @@ Fixed::Fixed(const Fixed& other)
 
 float Fixed::toFloat( void ) const
 {
-    return (static_cast<float>(value) / static_cast<float>( 1 << fractBits)); //pk
+    return (static_cast<float>(value) / static_cast<float>( 1 << fractBits));
 }
 
 int Fixed::toInt( void ) const
 {
-    return (value / (1 << fractBits)); //pk
+    return (value / (1 << fractBits));
 }
 
 std::ostream& operator<<(std::ostream& os, const Fixed& ref)

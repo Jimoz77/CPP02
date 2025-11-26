@@ -13,12 +13,29 @@ int main( void )
     std::cout << a << std::endl;
 
     std::cout << b << std::endl;
-
+	
     std::cout << Fixed::max( a, b ) << std::endl;
     
     if(a < b)
-        std::cout << "b est plus grand\n";
+	{
+		std::cout << "b est plus grand\n";
+	}
     if(a > b)
-        std::cout << "a est plus grand\n";
+	{
+		std::cout << "a est plus grand\n";
+	}
+	
+	if(a == b)
+	{
+		std::cout << "a et b sont egale\n";
+	}
+	
+	if(a != b)
+	{
+		std::cout << "a et b ne sont pas egale\n";
+	}
+
+	std::cout << "result:" << a << std::endl;
+	
     return 0;
 }
